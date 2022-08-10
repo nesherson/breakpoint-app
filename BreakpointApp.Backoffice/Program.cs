@@ -1,7 +1,15 @@
+using BreakpointApp.Infrastructure;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+ 
+    var services = builder.Services;
+    var env = builder.Environment;
+
+    services.AddDbContext<DatabaseContext>();
 
 var app = builder.Build();
 
