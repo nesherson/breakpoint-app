@@ -5,6 +5,10 @@ VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BreakpointApp.Backoffice", "BreakpointApp.Backoffice\BreakpointApp.Backoffice.csproj", "{C6D23E46-013C-48A9-BC14-C0A42D8ABDD0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BreakpointApp.Core", "BreakpointApp.Core\BreakpointApp.Core.csproj", "{EF3D2964-7F55-4321-8B0E-C7CC775F66C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BreakpointApp.Infrastructure", "BreakpointApp.Infrastructure\BreakpointApp.Infrastructure.csproj", "{548CA997-83A4-42C2-B497-F955E0DAC0D1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{C6D23E46-013C-48A9-BC14-C0A42D8ABDD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6D23E46-013C-48A9-BC14-C0A42D8ABDD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6D23E46-013C-48A9-BC14-C0A42D8ABDD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF3D2964-7F55-4321-8B0E-C7CC775F66C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF3D2964-7F55-4321-8B0E-C7CC775F66C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF3D2964-7F55-4321-8B0E-C7CC775F66C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF3D2964-7F55-4321-8B0E-C7CC775F66C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{548CA997-83A4-42C2-B497-F955E0DAC0D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{548CA997-83A4-42C2-B497-F955E0DAC0D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{548CA997-83A4-42C2-B497-F955E0DAC0D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{548CA997-83A4-42C2-B497-F955E0DAC0D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
