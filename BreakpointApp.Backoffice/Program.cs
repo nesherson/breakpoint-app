@@ -1,4 +1,5 @@
 using BreakpointApp.Infrastructure;
+using BreakpointApp.Infrastructure.Repositories.UnitOfWork;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,10 +7,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
  
-    var services = builder.Services;
-    var env = builder.Environment;
+var services = builder.Services;
+var env = builder.Environment;
 
-    services.AddDbContext<DatabaseContext>();
+services.AddDbContext<DatabaseContext>();
+services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 var app = builder.Build();
 

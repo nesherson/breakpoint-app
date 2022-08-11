@@ -1,4 +1,5 @@
 ﻿using BreakpointApp.Backoffice.Models;
+using BreakpointApp.Infrastructure.Repositories.UnitOfWork;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -7,14 +8,18 @@ namespace BreakpointApp.Backoffice.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IUnitOfWork unitOfWork)
         {
             _logger = logger;
+            _unitOfWork = unitOfWork;
+
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
+            var temp = _unitOfWork.UserRepository.Get();
             return View();
         }
 
