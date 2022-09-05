@@ -6,7 +6,8 @@
         string LastName { get; set; }
         string UserName { get; set; }
         string Email { get; set; }
-        string Password { get; set; }
+        string Hash { get; set; }
+        string Salt { get; set; }
 
     }
 }
