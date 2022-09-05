@@ -1,5 +1,6 @@
 using BreakpointApp.Infrastructure;
 using BreakpointApp.Infrastructure.Repositories.UnitOfWork;
+using ExampleApplication;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +13,12 @@ var env = builder.Environment;
 
 services.AddDbContext<DatabaseContext>();
 services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+#if DEBUG
+services.AddHostedService(sp => new NpmWatchHostedService(
+    enabled: sp.GetRequiredService<IWebHostEnvironment>().IsDevelopment(),
+    logger: sp.GetRequiredService<ILogger<NpmWatchHostedService>>()));
+#endif
 
 var app = builder.Build();
 

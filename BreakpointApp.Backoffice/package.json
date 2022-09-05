@@ -1,0 +1,22 @@
+{
+  "name": "breakpointapp.backoffice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "postcss.config.js",
+  "scripts": {
+    "prebuild:css": "rm -rf wwwroot/css",
+    "build:css": "sass --style compressed --no-source-map Styles:wwwroot/css",
+    "postbuild:css": "postcss wwwroot/css/site.css --replace",
+    "prewatch": "rm -rf wwwroot/css",
+    "watch": "sass --watch Styles:wwwroot/css"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^10.4.8",
+    "cssnano": "^5.1.13",
+    "cssnano-preset-advanced": "^5.3.8",
+    "postcss-cli": "^10.0.0",
+    "sass": "^1.54.8"
+  }
+}
