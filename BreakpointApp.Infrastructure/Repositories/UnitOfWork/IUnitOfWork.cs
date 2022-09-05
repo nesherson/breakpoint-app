@@ -1,11 +1,10 @@
-﻿using BreakpointApp.Core.Entities;
-using BreakpointApp.Infrastructure.Repositories.Generic;
+﻿using BreakpointApp.Infrastructure.Repositories.UserRepo;
 
 namespace BreakpointApp.Infrastructure.Repositories.UnitOfWork
 {
     public interface IUnitOfWork : IDisposable
     {
-        public GenericRepository<User> UserRepository { get; }
+        public IUserRepository UserRepository { get; }
 
         void Save();
     }

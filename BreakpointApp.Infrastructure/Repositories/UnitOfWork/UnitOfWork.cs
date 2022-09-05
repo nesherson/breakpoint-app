@@ -7,15 +7,15 @@ namespace BreakpointApp.Infrastructure.Repositories.UnitOfWork
     public class UnitOfWork : IUnitOfWork, IDisposable
     {
         private readonly DatabaseContext _databaseContext;
-        private GenericRepository<User> _userRepository;
+        private IUserRepository _userRepository;
 
         public UnitOfWork(DatabaseContext databaseContext)
         { 
             _databaseContext = databaseContext;
         }
 
-        public GenericRepository<User> UserRepository =>
-                _userRepository ??= new GenericRepository<User>(_databaseContext);
+        public IUserRepository UserRepository =>
+                _userRepository ??= new UserRepository(_databaseContext);
 
         public void Save()
         {

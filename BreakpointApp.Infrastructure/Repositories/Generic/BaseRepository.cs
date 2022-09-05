@@ -3,12 +3,12 @@ using System.Linq.Expressions;
 
 namespace BreakpointApp.Infrastructure.Repositories.Generic
 {
-    public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : class
+    public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : class
     {
         internal DatabaseContext _databaseContext;
         internal DbSet<TEntity> dbSet;
 
-        public GenericRepository(DatabaseContext databaseContext)
+        public BaseRepository(DatabaseContext databaseContext)
         { 
             _databaseContext = databaseContext;
             dbSet = _databaseContext.Set<TEntity>();
@@ -43,7 +43,7 @@ namespace BreakpointApp.Infrastructure.Repositories.Generic
             }
         }
 
-        public virtual TEntity GetById(object id)
+        public virtual TEntity GetById(Guid id)
         {
             return dbSet.Find(id);
         }
@@ -53,7 +53,7 @@ namespace BreakpointApp.Infrastructure.Repositories.Generic
             dbSet.Add(entity);
         }
 
-        public virtual void Delete(object id)
+        public virtual void Delete(Guid id)
         {
             TEntity entityToDelete = dbSet.Find(id);
             Delete(entityToDelete);

@@ -4,7 +4,7 @@ using System.Linq.Expressions;
 
 namespace BreakpointApp.Infrastructure.Repositories.Generic
 {
-    public interface IGenericRepository<TEntity> where TEntity : class
+    public interface IBaseRepository<TEntity> where TEntity : class
     {
         IEnumerable<TEntity> Get(
             Expression<Func<TEntity, bool>> filter = null,
@@ -12,11 +12,11 @@ namespace BreakpointApp.Infrastructure.Repositories.Generic
             string includeProperties = ""
             );
 
-        TEntity GetById(object id);
+        TEntity GetById(Guid id);
 
         void Insert(TEntity entity);
 
-        void Delete(object id);
+        void Delete(Guid id);
 
         void Delete(TEntity entityToDelete);
 
