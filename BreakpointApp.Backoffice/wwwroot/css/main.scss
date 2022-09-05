@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+// 1. Configuration and helpers
+@import "abstracts/variables";
+@import "abstracts/functions";
+@import "abstracts/mixins";
+
+// 2. Vendors
+@import "vendor/boostrap/bootstrap";
+@import "vendor/chart/chart";
+@import "vendor/chart/chart.theme";
+@import "vendor/datatables/datatables";
+@import "vendor/select2/select2";
+@import "vendor/select2/select2.theme";
+@import "vendor/daterangepicker/daterangepicker";
+@import "vendor/daterangepicker/daterangepicker.theme";
+@import "vendor/feather/feather";
+@import "vendor/feather/feather.theme";
+@import "vendor/jvectormap/jvectormap";
+@import "vendor/jvectormap/jvectormap.theme";
+@import "vendor/quill/quill";
+@import "vendor/quill/quill.theme";
+
+// 3. Base stuff
+@import "base/base";
+@import "base/fonts";
+@import "base/helpers";
+@import "base/typography";
+
+// 4. Layout-related sections
+@import "layout/footer";
+@import "layout/header";
+@import "layout/loader";
+@import "layout/main";
+@import "layout/sidebar";
+
+// 5. Components
+@import "components/avatar";
+@import "components/breadcrumb";
+@import "components/button";
+@import "components/card";
+@import "components/dropdown";
+@import "components/feed";
+@import "components/form";
+@import "components/icon";
+@import "components/list-group";
+@import "components/modal";
+@import "components/nav";
+@import "components/navbar";
+@import "components/progress";
+@import "components/pagination";
+@import "components/tables";
+
+// 6. Page-specific styles
+@import "pages/home";
+
+// 7. Themes
+@import "themes/default";
+
+// 8. Others
