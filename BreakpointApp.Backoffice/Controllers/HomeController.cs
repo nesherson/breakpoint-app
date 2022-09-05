@@ -19,7 +19,6 @@ namespace BreakpointApp.Backoffice.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var temp = _unitOfWork.UserRepository.Get();
             return View();
         }
 
